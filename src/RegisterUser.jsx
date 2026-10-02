@@ -52,13 +52,13 @@ export default function RegisterUser() {
         axios.get(`https://employeemanagementsystem-4z2n.onrender.com/getempbyid?empid=${empid}`)
             .then((response) => {
                 let arr = Object.keys(response.data);
-                if (arr.length == 0) {
+                if (arr.length === 0) {
                     alert("Enter valid empid");
                 }
                 else {
                     axios.post(`https://employeemanagementsystem-4z2n.onrender.com/regist`, user)
                         .then((response) => {
-                            if (response.data == "User regidtration succefully") {
+                            if (response.data === "User regidtration succefully") {
                                 alert(response.data);
                                 setisregistration(true);
                             }
@@ -80,7 +80,7 @@ export default function RegisterUser() {
     }
     let validation = () => {
 
-        if (firstname == "" || lastname == "" || username == "" || password == "" || confirmpassword == "" || email == "" || role == "" || gender == "" || contactno == 0 || empid == 0) {
+        if (firstname === "" || lastname === "" || username === "" || password === "" || confirmpassword === "" || email === "" || role === "" || gender === "" || contactno === 0 || empid === 0) {
             alert("Enter All fields");
             return false;
         }
@@ -108,7 +108,7 @@ export default function RegisterUser() {
             alert("password and confirm password should be same");
             return false;
         }
-        else if (role == "") {
+        else if (role === "") {
             alert("select role");
             return false;
         }
@@ -120,7 +120,7 @@ export default function RegisterUser() {
             alert("Enter valid empid");
             return false;
         }
-        else if (gender == "") {
+        else if (gender === "") {
             alert("select gender");
             return false;
         }

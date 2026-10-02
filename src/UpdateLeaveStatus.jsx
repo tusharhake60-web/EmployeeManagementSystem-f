@@ -51,8 +51,8 @@ export default function UpdateLeaveStatus() {
                                 <td>{l.reason}</td>
                                 <td>{l.status}</td>
                                 <td>
-                                    <button className='btn btn-warning' onClick={() => { update(l.leaveid, "approve") }} disabled={l.status == "approve"}>Approve</button>
-                                    <button className='btn btn-danger' onClick={() => { update(l.leaveid, "reject") }} disabled={l.status == "approve"}>Reject</button>
+                                    <button className='btn btn-warning' onClick={() => { update(l.leaveid, "approve") }} disabled={l.status === "approve"}>Approve</button>
+                                    <button className='btn btn-danger' onClick={() => { update(l.leaveid, "reject") }} disabled={l.status === "approve"}>Reject</button>
                                 </td>
                             </tr>
                         )

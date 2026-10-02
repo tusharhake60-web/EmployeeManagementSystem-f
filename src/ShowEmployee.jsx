@@ -25,19 +25,19 @@ export default function ShowEmployee() {
     let searchemployee = () => {
         let url;
 
-        if (searchby == "firstname") {
+        if (searchby === "firstname") {
             url = `https://employeemanagementsystem-4z2n.onrender.com/getempbyfname?firstname=${keyword}`;
         }
-        else if (searchby == "lastname") {
+        else if (searchby === "lastname") {
             url = `https://employeemanagementsystem-4z2n.onrender.com/getempbylname?lastname=${keyword}`
         }
-        else if (searchby == "designation") {
+        else if (searchby === "designation") {
             url = `https://employeemanagementsystem-4z2n.onrender.com/getempbydesignation?designation=${keyword}`
         }
-        else if (searchby == "department") {
+        else if (searchby === "department") {
             url = `https://employeemanagementsystem-4z2n.onrender.com/getempbydepartment?department=${keyword}`
         }
-        else if (searchby == "empid") {
+        else if (searchby === "empid") {
             let keyword1 = parseInt(keyword);
             url = `https://employeemanagementsystem-4z2n.onrender.com/getempbyid?empid=${keyword1}`
         }
@@ -49,7 +49,7 @@ export default function ShowEmployee() {
         axios.get(url)
             .then((response) => {
 
-                if (response.data.length == 0 || response.data == null) {
+                if (response.data.length === 0 || response.data === null) {
                     alert(`no recorde fount for given ${keyword}. wew are showing all employee list`);
                     setsearchresult([]);
                     //setrelode(!relode);

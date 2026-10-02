@@ -55,7 +55,7 @@ export default function ViewLeaveDetails() {
         let newleave = { fromdate, todate, reason }
         axios.put(`https://employeemanagementsystem-4z2n.onrender.com/updateleave?leaveid=${leaveid}`, newleave)
             .then((response) => {
-                if (response.data == "Leave status update succefully") {
+                if (response.data === "Leave status update succefully") {
                     alert(response.data)
                     setmodal(false)
                     setrelode(!relode);
@@ -97,7 +97,7 @@ export default function ViewLeaveDetails() {
                                 <td>{l.leaveid}</td>
                                 <td className='d-flex gap-2'>
                                     <button className='btn btn-warning' onClick={() => { cancleleave(l.leaveid) }}>cancle</button>
-                                    <button className='btn btn-danger' disabled={l.status == "approve"} onClick={() => { readytoupdate(l) }}>Update</button>
+                                    <button className='btn btn-danger' disabled={l.status === "approve"} onClick={() => { readytoupdate(l) }}>Update</button>
                                 </td>
                             </tr>
                         )

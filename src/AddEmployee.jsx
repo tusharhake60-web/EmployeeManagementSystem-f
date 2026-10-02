@@ -50,7 +50,7 @@ export default function AddEmployee() {
 
         axios.post(`https://employeemanagementsystem-4z2n.onrender.com/addemp`, employee)
             .then((response) => {
-                if (response.data == "Employee add succefull") {
+                if (response.data === "Employee add succefull") {
                     alert(response.data);
                     setrelode(!relode);
 
@@ -61,7 +61,7 @@ export default function AddEmployee() {
 
     let validation = () => {
 
-        if (firstname == "" || lastname == "" || email == "" || contactno == 0 || status == "" || department == "" || designation == "" || dob == "" || joiningdate == "" || edu == "" || address == "" || reportingmanager == "" || worklocation == "" || salary == 0 || adharno == 0 || panno == "" || exp == 0 || gender == "" || profile == "") {
+        if (firstname === "" || lastname === "" || email === "" || contactno === 0 || status === "" || department === "" || designation === "" || dob === "" || joiningdate === "" || edu === "" || address === "" || reportingmanager === "" || worklocation === "" || salary === 0 || adharno === 0 || panno === "" || exp === 0 || gender === "" || profile === "") {
             alert("please fill all details");
             return false;
         }
@@ -126,7 +126,7 @@ export default function AddEmployee() {
             alert("Enter valid reporting manager");
             return false;
         }
-        else if (profile == "") {
+        else if (profile === "") {
             alert("please select profile image");
             return false;
         }
