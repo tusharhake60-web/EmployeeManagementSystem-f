@@ -10,9 +10,8 @@ export default function LeaveApplication() {
     let [fromdate, setfromdate] = useState("");
     let [todate, settodate] = useState("");
     let [reason, setreason] = useState("");
-    let [allleave, setallleave] = useState([]);
+
     let today = new Date().toISOString().split("T")[0];
-    let app = process.env.REACT_APP_SERVER_IP
 
     useEffect(() => {
         let user = JSON.parse(localStorage.getItem("userinfo"))
@@ -31,17 +30,7 @@ export default function LeaveApplication() {
                 alert("server error");
             })
     }
-    let getallleave = () => {
 
-        axios.get(`https://employeemanagementsystem-4z2n.onrender.com/viewleavedetailebyemp?empid=${empid}`)
-            .then((response) => {
-                console.log(response.data);
-                setallleave(response.data);
-            })
-            .catch((error) => {
-                alert("find leaveapplication problem")
-            })
-    }
     return (
         <div  >
 
