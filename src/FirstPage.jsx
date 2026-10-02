@@ -1,5 +1,5 @@
 import React from 'react'
-import CommanNavbar from './CommanNavbar'
+
 
 export default function FirstPage() {
     return (
@@ -7,6 +7,7 @@ export default function FirstPage() {
 
             <h1 className='heading'>Welcome to Employee Management System</h1>
             <div>
+
                 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>

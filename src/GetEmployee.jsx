@@ -338,7 +338,7 @@ export default function GetEmployee() {
 
                                 <div className="mb-3">
                                     <label className="form-label">Profile Preview</label><br></br>
-                                    <img src={profile} width="250" value={profile}></img>
+                                    <img src={profile} width="250" value={profile} alt="profile"></img>
                                 </div>
 
                                 <div className="text-center">
