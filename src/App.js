@@ -7,7 +7,7 @@ import ContactUs from './ContactUs';
 import Services from './Services';
 import Home from './Home';
 import AdminDashbord from './AdminDashbord';
-import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import ShowEmployee from './ShowEmployee';
 import EmployeeDashboard from './EmployeeDashboard';
 import RegisterUser from './RegisterUser';
@@ -26,24 +26,24 @@ function App() {
 
 
       <AppContent></AppContent>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/home" element={<Home></Home>} />
-          <Route path="/aboutus" element={<AboutUs></AboutUs>} />
-          <Route path="/contactus" element={<ContactUs></ContactUs>} />
-          <Route path="/services" element={<Services></Services>} />
-          <Route path="/viewemp" element={<GetEmployee></GetEmployee>} />
-          <Route path="/addemp" element={<AddEmployee></AddEmployee>} />
-          <Route path="/admindashboard" element={<AdminDashbord></AdminDashbord>} />
-          <Route path="/showEmployee" element={<ShowEmployee></ShowEmployee>} />
-          <Route path="/employeeDashboard" element={<EmployeeDashboard></EmployeeDashboard>} />
-          <Route path="/registeruser" element={<RegisterUser></RegisterUser>}></Route>
-          <Route path="/" element={<FirstPage></FirstPage>}></Route>
-          <Route path="/leaveaplication" element={<LeaveApplication></LeaveApplication>}></Route>
-          <Route path='/viewleavedetails' element={<ViewLeaveDetails></ViewLeaveDetails>}></Route>
-          <Route path='viewallleaves' element={<UpdateLeaveStatus></UpdateLeaveStatus>}></Route>
-        </Routes>
-      </BrowserRouter>
+
+      <Routes>
+        <Route path="/home" element={<Home></Home>} />
+        <Route path="/aboutus" element={<AboutUs></AboutUs>} />
+        <Route path="/contactus" element={<ContactUs></ContactUs>} />
+        <Route path="/services" element={<Services></Services>} />
+        <Route path="/viewemp" element={<GetEmployee></GetEmployee>} />
+        <Route path="/addemp" element={<AddEmployee></AddEmployee>} />
+        <Route path="/admindashboard" element={<AdminDashbord></AdminDashbord>} />
+        <Route path="/showEmployee" element={<ShowEmployee></ShowEmployee>} />
+        <Route path="/employeeDashboard" element={<EmployeeDashboard></EmployeeDashboard>} />
+        <Route path="/registeruser" element={<RegisterUser></RegisterUser>}></Route>
+        <Route path="/" element={<FirstPage></FirstPage>}></Route>
+        <Route path="/leaveaplication" element={<LeaveApplication></LeaveApplication>}></Route>
+        <Route path='/viewleavedetails' element={<ViewLeaveDetails></ViewLeaveDetails>}></Route>
+        <Route path='viewallleaves' element={<UpdateLeaveStatus></UpdateLeaveStatus>}></Route>
+      </Routes>
+
 
 
 
