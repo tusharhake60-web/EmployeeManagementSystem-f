@@ -17,7 +17,7 @@ export default function RegisterUser() {
     let [contactno, setcontactno] = useState(0);
     let [empid, setempid] = useState(0);
     let [gender, setgender] = useState("");
-    let app = process.env.REACT_APP_SERVER_IP
+
 
     let userlogin = (event) => {
         event.preventDefault();
@@ -104,7 +104,7 @@ export default function RegisterUser() {
             alert("Enter valid password")
             return false;
         }
-        else if (password != confirmpassword) {
+        else if (password !== confirmpassword) {
             alert("password and confirm password should be same");
             return false;
         }

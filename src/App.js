@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import AddEmployee from './AddEmployee';
 import GetEmployee from './GetEmployee';
@@ -58,8 +58,8 @@ function AppContent() {
   let publicpage = ["/", "/home", "/aboutus", "/services", "/contactus"];
   return (
     <div>{
-      (isloggedin && user && location.pathname != "/registeruser") &&
-      (user.role.toLowerCase() == "admin" ? <AdminNav /> : <EmpNavbar />)
+      (isloggedin && user && location.pathname !== "/registeruser") &&
+      (user.role.toLowerCase() === "admin" ? <AdminNav /> : <EmpNavbar />)
     }
       {
         (!isloggedin && !user) &&

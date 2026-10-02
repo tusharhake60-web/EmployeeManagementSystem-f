@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+
 
 export default function AddEmployee() {
 
@@ -26,7 +26,7 @@ export default function AddEmployee() {
     let [address, setaddress] = useState("");
     let [relode, setrelode] = useState(false);
 
-    let app = process.env.REACT_APP_SERVER_IP
+
 
     let handalprofile = (event) => {
         let file = event.target.files[0];
@@ -275,7 +275,7 @@ export default function AddEmployee() {
 
                 <div className="mb-3">
                     <label className="form-label">Profile Preview</label><br></br>
-                    <img src={profile} width="250"></img>
+                    <img src={profile} width="250" alt=''></img>
                 </div>
 
                 <div className="text-center">

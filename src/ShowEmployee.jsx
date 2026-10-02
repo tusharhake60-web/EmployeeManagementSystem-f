@@ -4,7 +4,7 @@ import { useState } from 'react'
 export default function ShowEmployee() {
 
     let [emplist, setemplist] = useState([]);
-    let app = process.env.REACT_APP_SERVER_IP
+
 
 
     //search by

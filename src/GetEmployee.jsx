@@ -34,7 +34,7 @@ export default function GetEmployee() {
     let [searchby, setsearchby] = useState("");
     let [keyword, setkeyword] = useState("");
     let [searchresult, setsearchresult] = useState([]);
-    let app = process.env.REACT_APP_SERVER_IP
+
 
     useEffect(() => {
 

@@ -14,7 +14,7 @@ export default function ViewLeaveDetails() {
     let [leaveid, setleaveid] = useState(0);
     let [relode, setrelode] = useState(false);
     // let [allleave, setallleave] = useState([]);
-    let app = process.env.REACT_APP_SERVER_IP
+
 
     useEffect(() => {
         let user = JSON.parse(localStorage.getItem("userinfo"))

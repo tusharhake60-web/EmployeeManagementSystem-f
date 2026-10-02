@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 export default function UpdateLeaveStatus() {
     let [employeeleave, setemployeeleave] = useState([]);
-    let app = process.env.REACT_APP_SERVER_IP
+
 
     useEffect(() => {
 
