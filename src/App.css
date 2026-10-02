@@ -1,0 +1,115 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.heading {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0));
+}
+
+.navbar .navbar-nav .nav-item,
+nav-link:hover {
+  font-size: 20px;
+  font-style: bold;
+  color: rgb(241, 238, 60);
+}
+
+.admindash {
+
+  background-image: url("https://i.pinimg.com/1200x/bb/d9/5a/bbd95a4840e631b0217777d0b3c72a08.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.empdash {
+  background-image: url("https://i.pinimg.com/1200x/76/03/79/7603793b40a855911580fce6fbf2c5e1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-login {
+  width: 500px;
+  height: 600px;
+  background-image: url("https://imgs.search.brave.com/vUHfgF1EQKPngNxjlZjtfys-gMw5nqgV--OP5Q8y4Y0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjkv/MjU2LzA3Ny9zbWFs/bC9yZWQtbGlnaHQt/b24tYS1ibGFjay1i/YWNrZ3JvdW5kLXBo/b3RvLmpwZw");
+  margin: auto;
+  background-position: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+
+
+}
+
+.card-body {
+
+  height: 80vh;
+  margin: 0;
+
+}
+
+.login {
+  color: white;
+}
+
+.bg {
+  background-image: url("https://imgs.search.brave.com/9yV-e4xquxkUJqSWKPLLlck6v4ArXslVvIkn7MfygOY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/MDM0NTU2Mzc5Mjct/NzMwYmNlODU4M2Mw/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZhdXRv/PWZvcm1hdCZmaXQ9/Y3JvcCZpeGxpYj1y/Yi00LjEuMCZpeGlk/PU0zd3hNakEzZkRC/OE1IeHpaV0Z5WTJo/OE1UWjhmR0poWTJ0/bmNtOTFibVI4Wlc1/OE1IeDhNSHg4ZkRB/PQ");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.card {
+  background-image: url("https://imgs.search.brave.com/SNhUomo0fXqDP4yDxE0PlsydZAqQZvGjRPYRNBu9sqA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbmcu/cG5ndHJlZS5jb20v/dGh1bWJfYmFjay9m/aDI2MC9iYWNrZ3Jv/dW5kLzIwMjMxMjI3/L3BuZ3RyZWUtYWVz/dGhldGljLWJhY2tk/cm9wLWZlYXR1cmlu/Zy1hLWRlbGljYXRl/LWxpZ2h0LWJsdWUt/d2F0ZXJjb2xvci10/ZXh0dXJlLWltYWdl/XzEzODk3NTQ3LnBu/Zw");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  min-height: 200px;
+}
+
+.container-fluid {
+  background-repeat: no-repeat;
+  background-image: url("https://imgs.search.brave.com/RhDhi4WwEAp9NgfSg1aIV6eOVr80bgEjEE10m4PaZro/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9i/bHVlLXdhbGwtYmFj/a2dyb3VuZF81Mzg3/Ni04ODY2My5qcGc_/c2VtdD1haXNfaHli/cmlkJnc9NzQwJnE9/ODA");
+  background-size: cover;
+
+}
+
+.leavform {}
