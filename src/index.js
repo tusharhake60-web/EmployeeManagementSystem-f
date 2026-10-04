@@ -10,10 +10,10 @@ import { BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
-  <BrowserRouter basename='/employee_management_system_frontend'>
-  <App />
+  <BrowserRouter >
+    <App />
   </BrowserRouter>
-    
+
   // </React.StrictMode>
 );
 
