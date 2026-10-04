@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
+const app = "https://employeemanagementsystem-4z2n.onrender.com";
 
 export default function GetEmployee() {
   const [employees, setemployees] = useState([]);
@@ -28,19 +29,19 @@ export default function GetEmployee() {
   const [education, seteducation] = useState("");
   const [address, setaddress] = useState("");
   const [empid, setempid] = useState(0);
-  let app = "https://employeemanagementsystem-4z2n.onrender.com";
+
 
   useEffect(() => {
     axios
       .get(`${app}/getemplist`)
       .then((res) => {
         setemployees(res.data);
-        console.log(employees);
       })
-      .catch((error) => {
+      .catch(() => {
         alert("API not found.");
       });
   }, [reload]);
+
 
   let delete_emp = (empid) => {
     let permit = window.confirm("Are you sure you want to delete record?");
