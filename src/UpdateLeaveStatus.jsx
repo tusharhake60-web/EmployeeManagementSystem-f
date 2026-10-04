@@ -4,9 +4,7 @@ import axios from "axios";
 
 export default function UpdateLeaveStatus() {
   const [leaves, setLeaves] = useState([]);
-  // const [leaveid,setleaveid]=useState(0);
-  // const[status,setstatus]=useState("");
-  let app = process.env.REACT_APP_SERVER_IP;
+
 
   const refreshData = () => {
     axios.get(`https://employeemanagementsystem-4z2n.onrender.com/allleaves`)

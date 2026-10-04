@@ -28,7 +28,7 @@ export default function GetEmployee() {
   const [education, seteducation] = useState("");
   const [address, setaddress] = useState("");
   const [empid, setempid] = useState(0);
-  let app="https://employeemanagementsystem-4z2n.onrender.com";
+  let app = "https://employeemanagementsystem-4z2n.onrender.com";
 
   useEffect(() => {
     axios
@@ -89,122 +89,122 @@ export default function GetEmployee() {
     console.log(filepath);
     setprofile(filepath);
   };
-  let validate=()=>{
-    if(firstname===""||lastname===""||middlename==""||email===""||gender===""||profile===""||contactno===""||panno===""||adharno===""||dob===""||desig===""||dept===""||salary===""||exp===""||joiningdate===""||reportingmanager===""||worklocation===""||status===""||education===""||address===""){
+  let validate = () => {
+    if (firstname === "" || lastname === "" || middlename === "" || email === "" || gender === "" || profile === "" || contactno === "" || panno === "" || adharno === "" || dob === "" || desig === "" || dept === "" || salary === "" || exp === "" || joiningdate === "" || reportingmanager === "" || worklocation === "" || status === "" || education === "" || address === "") {
       alert("Required all fields.")
       return false;
     }
-    else if(!/^[a-zA-Z]{2,15}$/.test(firstname)){
+    else if (!/^[a-zA-Z]{2,15}$/.test(firstname)) {
       alert("Enter Valid firstname")
       return false;
     }
-    else if(!/^[a-zA-Z]{2,15}$/.test(middlename)){
+    else if (!/^[a-zA-Z]{2,15}$/.test(middlename)) {
       alert("Enter Valid middlename")
       return false;
     }
-    else if(!/^[a-zA-Z]{2,15}$/.test(lastname)){
+    else if (!/^[a-zA-Z]{2,15}$/.test(lastname)) {
       alert("Enter Valid lastname")
       return false;
     }
-    else if(!/^[A-Za-z0-9]+@[a-z]+\.[a-z]{2,}$/.test(email)){
+    else if (!/^[A-Za-z0-9]+@[a-z]+\.[a-z]{2,}$/.test(email)) {
       alert("Enter Valid Email.")
       return false
     }
-    else if(gender!=="Male"&&gender!=="Female"){
+    else if (gender !== "Male" && gender !== "Female") {
       alert("Select Gender")
       return false
     }
-    else if(profile===""){
+    else if (profile === "") {
       alert("Choose File for Profile.")
       return false
     }
-    else if(!/^[0-9]{10}$/.test(contactno)){
+    else if (!/^[0-9]{10}$/.test(contactno)) {
       alert("Enter Valid Contact.")
       return false
     }
-    else if(!/^[A-Z0-9]{10}$/.test(panno)){
+    else if (!/^[A-Z0-9]{10}$/.test(panno)) {
       alert("Enter Valid PAN No.")
       return false
     }
-    else if(!/^[0-9-]{14}$/.test(adharno)){
+    else if (!/^[0-9-]{14}$/.test(adharno)) {
       alert("Enter Valid Adhar No.")
       return false
     }
-    else if(!/^[A-Za-z .]{2,}$/.test(desig)){
+    else if (!/^[A-Za-z .]{2,}$/.test(desig)) {
       alert("Enter Valid Designation")
       return false
     }
-    else if(!/^[A-Za-z ]{2,}$/.test(dept)){
+    else if (!/^[A-Za-z ]{2,}$/.test(dept)) {
       alert("Enter Valid Department.")
       return false
     }
-    else if(!/^[0-9]{2,}$/.test(salary)){
+    else if (!/^[0-9]{2,}$/.test(salary)) {
       alert("Enter Valid Salary.")
       return false
     }
-    else if(!/^[0-9]{1,2}$/.test(exp)){
+    else if (!/^[0-9]{1,2}$/.test(exp)) {
       alert("Enter Valid Experience.")
       return false
     }
-    else if(!/^[A-Za-z .]{2,}$/.test(reportingmanager)){
+    else if (!/^[A-Za-z .]{2,}$/.test(reportingmanager)) {
       alert("Enter Valid Reporting Manager.")
       return false
     }
-    else if(!/^[A-Za-z ,]{2,}$/.test(worklocation)){
+    else if (!/^[A-Za-z ,]{2,}$/.test(worklocation)) {
       alert("Enter Valid Work Location")
       return false;
     }
-    else if(status!=="Active"&&status!=="Inactive"){
+    else if (status !== "Active" && status !== "Inactive") {
       alert("Select Valid Status.")
       return false;
     }
-    else if(!/^[A-Za-z ']{2,}$/.test(education)){
+    else if (!/^[A-Za-z ']{2,}$/.test(education)) {
       alert("Enter Valid Education.")
       return false
     }
-    else if(!/^[A-Za-z ,]{2,}$/.test(address)){
+    else if (!/^[A-Za-z ,]{2,}$/.test(address)) {
       alert("Enter Valid Address.")
       return false
     }
-    else{
+    else {
       return true;
     }
-    
+
   }
   let update = (e) => {
     e.preventDefault();
-    if(validate()){
+    if (validate()) {
       let newdata = {
-      firstname,
-      middlename,
-      lastname,
-      email,
-      gender,
-      profile,
-      contactno,
-      adharno,
-      panno,
-      dob,
-      dept,
-      desig,
-      salary,
-      joiningdate,
-      exp,
-      reportingmanager,
-      worklocation,
-      status,
-      education,
-      address,
-    };
-    axios
-      .put(`${app}/updateemp?empid=${empid}`, newdata)
-      .then((res) => {
-        if (res.data === "Employee is Updated Successfully.") {
-          alert(res.data);
-          setshowmodel(false);
-          setreload(!reload);
-        }
-      });
+        firstname,
+        middlename,
+        lastname,
+        email,
+        gender,
+        profile,
+        contactno,
+        adharno,
+        panno,
+        dob,
+        dept,
+        desig,
+        salary,
+        joiningdate,
+        exp,
+        reportingmanager,
+        worklocation,
+        status,
+        education,
+        address,
+      };
+      axios
+        .put(`${app}/updateemp?empid=${empid}`, newdata)
+        .then((res) => {
+          if (res.data === "Employee is Updated Successfully.") {
+            alert(res.data);
+            setshowmodel(false);
+            setreload(!reload);
+          }
+        });
     }
   };
 
@@ -231,16 +231,16 @@ export default function GetEmployee() {
     axios
       .get(url)
       .then((res) => {
-        if(res.data.length===0){
+        if (res.data.length === 0) {
           alert(`No matching record found for ${searchby}.We are showing all employee records...`);
           setsearchres([])
           setreload(!reload)
         }
-        else{
-          if(Array.isArray(res.data)){
+        else {
+          if (Array.isArray(res.data)) {
             setsearchres(res.data)
           }
-          else{
+          else {
             setsearchres([res.data])
           }
         }
@@ -252,9 +252,9 @@ export default function GetEmployee() {
   return (
     <div>
       <div className="container mt-3 d-flex flex-column flex-md-row gap-2 align-items-start align-items-md-center d-flex flex-column flex-md-row gap-2">
-      
+
         <select
-        className="form-select"
+          className="form-select"
           onChange={(e) => {
             setsearchby(e.target.value);
           }}
@@ -283,7 +283,7 @@ export default function GetEmployee() {
       </div>
       <div className="container-fluid">
         <div className="row mt-3 gy-3">
-          {(searchres.length>0?searchres:employees).map((emp) => (
+          {(searchres.length > 0 ? searchres : employees).map((emp) => (
             <div className="col-12 col-sm-6 col-md-4 col-lg-3">
               <div className="card" style={{ width: "20rem" }} key={emp.empid}>
                 <img
@@ -295,7 +295,7 @@ export default function GetEmployee() {
 
                 <div className="card-body">
                   <h5 className="card-title">
-                    {emp.firstname} {emp.middlename} {emp.lastname} 
+                    {emp.firstname} {emp.middlename} {emp.lastname}
                     <br />({emp.gender})
                   </h5>
 
